@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.3</version>
+		<version>3.0.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.Proyecto_Web</groupId>
@@ -61,21 +61,41 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	 <dependency>
-	  <groupId>org.springframework</groupId>
-	  <artifactId>spring-context</artifactId>
-	  <version>6.0.2</version>
-	  <type>jar</type>
-	 </dependency>
-	 <dependency>
-	  <groupId>org.thymeleaf</groupId>
-	  <artifactId>thymeleaf-spring6</artifactId>
-          <version>3.1.0.RC1</version>
-	  <type>jar</type>
-	 </dependency>
-         
-	</dependencies>
+                <dependency>
+                         <groupId>org.springframework</groupId>
+                         <artifactId>spring-context</artifactId>
+                         <version>6.0.2</version>
+                         <type>jar</type>
+                </dependency>
+                <dependency>
+                         <groupId>org.thymeleaf</groupId>
+                         <artifactId>thymeleaf-spring6</artifactId>
+                         <version>3.1.0.RC1</version>
+                         <type>jar</type>
+                </dependency>
+                <dependency>
+                         <groupId>org.springframework</groupId>
+                         <artifactId>spring-aop</artifactId>
+                </dependency>
+                <dependency>
+                           <groupId>org.springframework</groupId>
+                           <artifactId>spring-beans</artifactId>
+                           <version>6.0.2</version>
+                </dependency>
+                <dependency>
+                       <groupId>org.springframework</groupId>
+                       <artifactId>spring-core</artifactId>
+                       <version>6.0.2</version>
+               </dependency>
+               <dependency>
+                       <groupId>org.springframework</groupId>
+                       <artifactId>spring-jcl</artifactId>
+                       <version>6.0.2</version>
+               </dependency>
 
+
+	</dependencies>
+        
 	<build>
 		<plugins>
 			<plugin>

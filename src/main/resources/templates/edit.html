@@ -1,0 +1,96 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>KPI System</title>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-dark navbar-light bg-primary">
+  <a class="navbar-brand" href="#">KPI System</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Inicio <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Agregar Empleado</a>
+      </li>
+      <li class="nav-item active">
+      <a th:href="@{/barChart}">Dashboard</a>
+     </li>
+    </ul>
+   
+  </div>
+</nav>
+    
+      	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="text-center text-primary">Modificar Empleado</h4>
+
+						<form th:action="@{/update}" method="post" th:object="${em}">
+                                                    <input type="hidden" th:value="${em.id}" name="id">
+							<div class="form-group">
+								<label>Ingrese el nombre</label> <input type="text"
+									class="form-control" name="name" th:value="${em.name}">
+							</div>
+                                                        <div class="form-group">
+								<label>Apellidos</label> <input type="text"
+									class="form-control" name="apellidos" th:value="${em.apellidos}">
+							</div>
+                                                    <div class="form-group">
+								<label>Edad</label> <input type="text"
+									class="form-control" name="edad" th:value="${em.edad}">
+							</div>
+							<div class="form-group">
+								<label>Ingrese la dirección</label> <input type="text"
+									class="form-control" name="address" th:value="${em.address}">
+							</div>
+
+							<div class="form-group">
+								<label>Ingrese el Email</label> <input type="email"
+									class="form-control" name="email" th:value="${em.email}">
+							</div>
+
+
+							<div class="form-group">
+								<label>Ingrese el número de teléfono</label> <input type="number"
+									class="form-control" name="telefono" th:value="${em.telefono}">
+							</div>
+
+
+							<div class="form-group">
+								<label>Ingrese el salario</label> <input type="number"
+									class="form-control" name="salario" th:value="${em.salario}">
+							</div>
+
+							<button class="btn btn-primary btn-block">Modificar</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+      
+      
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
